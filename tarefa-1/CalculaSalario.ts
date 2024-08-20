@@ -6,8 +6,8 @@ export default class CalculaSalario {
     constructor(salarioBase: number = 1000) {
         this.salarioBase = salarioBase;
     }
-    calcular(cargo: Cargos) {
 
+    calcular(cargo: Cargos) {
 
         if (cargo === Cargos.Estagiario) {
             return this.salarioBase * 1.2;

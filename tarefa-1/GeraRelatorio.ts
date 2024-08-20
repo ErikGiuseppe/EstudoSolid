@@ -1,11 +1,15 @@
-import CalculaSalario from "./CalculaSalario";
-import Colaborador from "./Colaborador";
+import CalculaSalario from "./CalculaSalario"
+import Colaborador from "./Colaborador"
 
-export default class GerarRelatorio {
-    constructor(private _colaboradores:Colaborador[],private servicoCalculaSalario:CalculaSalario){}
+export default class GeraRelatorio {
+    constructor(
+        private quadroDeColaboradores: Colaborador[],
+        private servicoCalculaSalario: CalculaSalario
+    ) { }
+
     gerarJSON() {
 
-        let relatorio = this._colaboradores.map((colaborador) => {
+        let relatorio = this.quadroDeColaboradores.map((colaborador) => {
             return ({
                 nome: colaborador.nome,
                 cargo: colaborador.cargo,
